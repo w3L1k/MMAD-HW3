@@ -179,7 +179,7 @@ with batch_tab:
                     result = batch.copy()
                     result["probability_good"] = probabilities
                     result["recommend"] = probabilities >= threshold
-                    st.dataframe(result, use_container_width=True)
+                    st.dataframe(result, width="stretch")
                     st.download_button(
                         "Скачать предсказания CSV",
                         data=result.to_csv(index=False).encode("utf-8-sig"),
